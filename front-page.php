@@ -518,7 +518,8 @@ get_header();
         <div class="relative pl-24 group">
             <div
                 class="absolute left-0 top-0 w-14 h-14 bg-gold text-navy rounded-full flex items-center justify-center font-serif text-xl border-4 border-slate-50 z-10 shadow-xl">
-                <i class="fas fa-check"></i></div>
+                <i class="fas fa-check"></i>
+            </div>
             <div class="bg-navy p-10 border border-navy shadow-2xl rounded-sm"><span
                     class="text-white/50 text-[10px] font-bold uppercase tracking-[0.2em] mb-3 block">Day 45: Go Live &
                     Active Management</span>
@@ -554,8 +555,9 @@ get_header();
         <div class="lg:col-span-8 space-y-12">
             <article
                 class="bg-white border border-slate-200 rounded-sm overflow-hidden hover:shadow-2xl transition duration-300 group cursor-pointer">
-                <div
-                    class="h-64 bg-slate-200 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center">
+                <div class="h-64 bg-slate-200 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center"
+                    role="img"
+                    aria-label="Corporate boardroom reviewing FICA tax savings and EBITDA expansion strategy">
                 </div>
                 <div class="p-8 relative bg-white"><span
                         class="text-gold text-xs font-bold uppercase tracking-widest mb-3 block">Tax Strategy</span>
@@ -570,8 +572,9 @@ get_header();
             </article>
             <article
                 class="bg-white border border-slate-200 rounded-sm overflow-hidden hover:shadow-2xl transition duration-300 group cursor-pointer">
-                <div
-                    class="h-64 bg-slate-200 bg-[url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center">
+                <div class="h-64 bg-slate-200 bg-[url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center"
+                    role="img"
+                    aria-label="Financial officer signing Section 125 compliance documents for tax-free wealth accumulation">
                 </div>
                 <div class="p-8 relative bg-white"><span
                         class="text-gold text-xs font-bold uppercase tracking-widest mb-3 block">Retention</span>

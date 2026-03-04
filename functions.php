@@ -97,6 +97,40 @@ function wimper_lazy_load_leadconnector()
             }
         })();
     </script>
+    </script>
     <?php
 }
 add_action('wp_footer', 'wimper_lazy_load_leadconnector', 999);
+
+/**
+ * Add Theme Support for Document Title
+ */
+function wimper_theme_support()
+{
+    add_theme_support('title-tag');
+}
+add_action('after_setup_theme', 'wimper_theme_support');
+
+/**
+ * Inject FinancialService JSON-LD Schema
+ */
+function wimper_inject_financial_schema()
+{
+    if (is_front_page()) {
+        $schema = array(
+            '@context' => 'https://schema.org',
+            '@type' => 'FinancialService',
+            'name' => 'WIMPER Financial Architecture',
+            'url' => home_url('/'),
+            'description' => 'The W.I.M.P.E.R. Program is a proprietary Section 125/105 chassis that engineers EBITDA expansion through FICA tax savings.',
+            'areaServed' => 'United States',
+            'offers' => array(
+                '@type' => 'Offer',
+                'name' => 'Section 125 Financial Strategy',
+                'description' => 'FICA tax reduction and EBITDA recapture consulting.',
+            )
+        );
+        echo '<script type="application/ld+json">' . wp_json_encode($schema) . '</script>' . "\n";
+    }
+}
+add_action('wp_head', 'wimper_inject_financial_schema');

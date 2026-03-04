@@ -4,9 +4,30 @@
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>W.I.M.P.E.R. | Financial Architecture</title>
 
-	<!-- Tailwind CSS CDN -->
+	<!-- SEO Meta Tags -->
+	<meta name="description"
+		content="The W.I.M.P.E.R. Program is a proprietary Section 125/105 chassis that engineers EBITDA expansion through FICA tax savings without reducing employee take-home pay.">
+	<meta name="keywords"
+		content="WIMPER, Section 125, FICA tax reduction, EBITDA recapture, corporate wealth strategy, wellness program, payroll tax savings">
+	<meta name="author" content="WIMPER Financial Architecture">
+
+	<!-- Open Graph / Social Media Meta Tags -->
+	<meta property="og:title" content="W.I.M.P.E.R. | Financial Architecture & EBITDA Expansion">
+	<meta property="og:description"
+		content="Physical removal of payroll from the FICA taxation zone. Self-funded EBITDA recapture engineered through a compliant Section 125 chassis.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="<?php echo esc_url(home_url('/')); ?>">
+
+	<!-- Twitter Card Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="W.I.M.P.E.R. | Financial Architecture">
+	<meta name="twitter:description"
+		content="Self-funded EBITDA recapture engineered through a compliant Section 125 chassis. Reduce your taxable surface area today.">
+
+	<?php wp_head(); ?>
+
+	<!-- Tailwind CSS CDN (Keep Below wp_head to allow enqueue overrides if needed) -->
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script>
 		tailwind.config = {
