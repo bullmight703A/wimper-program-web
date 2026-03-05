@@ -134,3 +134,14 @@ function wimper_inject_financial_schema()
     }
 }
 add_action('wp_head', 'wimper_inject_financial_schema');
+
+/**
+ * Optimize Native WordPress XML Sitemaps (SEO Cleanup)
+ * Remove 'users' and 'taxonomies' (tags/categories) to prevent sitemap bloat.
+ */
+add_filter('wp_sitemaps_add_provider', function ($provider, $name) {
+    if (in_array($name, array('users', 'taxonomies'))) {
+        return false;
+    }
+    return $provider;
+}, 10, 2);
