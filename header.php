@@ -54,12 +54,12 @@
 
 	<!-- Custom Styles from User HTML -->
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 		body {
 			font-family: 'Inter', sans-serif;
-			color: #334155;
-			background-color: #f8fafc;
+			color: #1e293b;
+			background-color: #ffffff;
 			overflow-x: hidden;
 		}
 
@@ -68,89 +68,66 @@
 		h3,
 		h4,
 		h5 {
-			font-family: 'Playfair Display', serif;
+			font-family: 'Inter', sans-serif;
+			font-weight: 700;
+			letter-spacing: -0.02em;
 		}
 
-		/* Corporate Trust Palette (WIMPER Benefits Style) */
+		/* Maxwell-Inspired SaaS Palette */
 		.bg-navy {
-			background-color: #1e3a8a;
+			background-color: #1e40af;
 		}
 
-		/* Royal Blue */
-		.text-gold {
-			color: #0ea5e9;
+		.text-accent {
+			color: #3b82f6;
 		}
 
-		/* Sky Blue Accent */
-		.border-gold {
-			border-color: #0ea5e9;
+		.bg-accent {
+			background-color: #3b82f6;
 		}
 
-		.bg-gold {
-			background-color: #0ea5e9;
+		.bg-soft-blue {
+			background-color: #f8faff;
 		}
 
-		.hover-text-gold:hover {
-			color: #0ea5e9;
+		.border-soft {
+			border-color: #e2e8f0;
 		}
 
-		.text-navy {
-			color: #1e3a8a;
-		}
-
-		.bg-slate-navy {
-			background-color: #172554;
-		}
-
-		/* Darker Blue for contrast */
-
-		/* Gradients & Effects */
+		/* Hero & Visuals */
 		.hero-gradient {
-			background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+			background: radial-gradient(circle at 70% 30%, #f0f7ff 0%, #ffffff 100%);
 		}
 
-		.glass-panel {
-			background: rgba(255, 255, 255, 0.95);
-			border: 1px solid #bfdbfe;
-			box-shadow: 0 20px 50px -12px rgba(37, 99, 235, 0.15);
+		.card-shadow {
+			box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
 		}
 
-		.glow-text {
-			text-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
-		}
-
-		/* Layout */
-		.page-header-spacer {
-			padding-top: 140px;
-			padding-bottom: 80px;
-			background: white;
-			border-bottom: 1px solid #e2e8f0;
+		.btn-round {
+			border-radius: 8px;
 		}
 
 		/* Navigation */
 		.nav-link {
-			font-size: 0.7rem;
-			letter-spacing: 0.1em;
-			text-transform: uppercase;
-			font-weight: 700;
-			transition: color 0.3s;
+			font-size: 0.85rem;
+			font-weight: 600;
+			color: #64748b;
+			transition: all 0.2s;
 			cursor: pointer;
 		}
 
 		.nav-link:hover {
-			color: #2563eb;
+			color: #3b82f6;
 		}
 
 		.nav-link.active {
-			color: #2563eb;
-			border-bottom: 2px solid #2563eb;
-			padding-bottom: 2px;
+			color: #1e40af;
 		}
 
-		/* SPA Page Visibility */
+		/* Page Transitions */
 		.page-view {
 			display: none;
-			animation: fadeIn 0.5s ease-in-out;
+			animation: fadeIn 0.4s ease-out;
 		}
 
 		.page-view.active {
@@ -160,7 +137,7 @@
 		@keyframes fadeIn {
 			from {
 				opacity: 0;
-				transform: translateY(10px);
+				transform: translateY(5px);
 			}
 
 			to {
@@ -169,66 +146,29 @@
 			}
 		}
 
-		/* Timeline Line */
-		.timeline-line {
-			position: absolute;
-			left: 28px;
-			top: 20px;
-			bottom: 0;
-			width: 1px;
-			background: linear-gradient(to bottom, #2563eb 0%, #cbd5e1 100%);
-			z-index: 0;
+		/* Dashboard Specific Styles */
+		.mock-dashboard {
+			background: white;
+			border-radius: 20px;
+			overflow: hidden;
+			border: 1px solid #e2e8f0;
+			box-shadow: 0 30px 60px -12px rgba(30, 64, 175, 0.15);
 		}
 
-		/* Connectors for Wealth Flow */
-		.step-connector {
-			height: 2px;
-			background: #e2e8f0;
-			flex-grow: 1;
-			margin: 0 20px;
-			position: relative;
-			top: -10px;
-		}
-
-		/* Custom Form Styles */
-		.custom-form input,
-		.custom-form select {
-			background-color: #f8fafc;
-			border: none;
-			border-bottom: 1px solid #cbd5e1;
-			border-radius: 0;
-			padding: 1rem 0.75rem;
-			font-family: 'Playfair Display', serif;
-			font-size: 1.1rem;
-			color: #1e3a8a;
-			transition: all 0.3s ease;
-		}
-
-		.custom-form input:focus,
-		.custom-form select:focus {
-			background-color: #ffffff;
-			border-bottom: 1px solid #2563eb;
-			outline: none;
-		}
-
-		/* Button Overrides */
-		.btn-primary {
-			background-color: #2563eb;
-			color: white;
+		.dash-step {
+			border-left: 3px solid #e2e8f0;
 			transition: all 0.3s;
 		}
 
-		.btn-primary:hover {
-			background-color: #1e40af;
-			shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+		.dash-step:hover {
+			border-left-color: #3b82f6;
+			background-color: #f8fafc;
 		}
 
-		/* Section text overrides for contrast */
-		.text-green-highlight {
-			color: #10b981;
+		.dash-step.active {
+			border-left-color: #3b82f6;
+			background-color: #eff6ff;
 		}
-
-		/* For positive money numbers */
 	</style>
 	<?php wp_head(); ?>
 </head>
@@ -237,44 +177,48 @@
 	<?php wp_body_open(); ?>
 
 	<!-- NAVIGATION -->
-	<nav class="bg-white/95 backdrop-blur-xl border-b border-slate-200 fixed w-full z-50 transition-all duration-300">
+	<nav class="bg-white/90 backdrop-blur-md border-b border-slate-100 fixed w-full z-50">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="flex justify-between h-24">
+			<div class="flex justify-between h-20">
 				<div class="flex items-center cursor-pointer"
 					onclick="<?php echo is_front_page() ? "navigateTo('home')" : "window.location.href='" . home_url('/') . "'"; ?>">
-					<div class="flex flex-col border-l-4 border-gold pl-4 transition hover:border-navy">
-						<span
-							class="text-xl font-bold text-slate-900 tracking-tight font-serif leading-none">W.I.M.P.E.R.</span>
-						<span class="text-[9px] uppercase tracking-[0.1em] text-slate-500 font-semibold mt-1">Wellness &
-							Integrated Medical Plan Expense Reimbursement</span>
+					<div class="flex items-center space-x-3">
+						<div
+							class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center text-white shadow-lg shadow-blue-200">
+							<i class="fas fa-shield-heart text-xl"></i>
+						</div>
+						<div class="flex flex-col">
+							<span
+								class="text-xl font-extrabold text-slate-900 tracking-tight leading-none">W.I.M.P.E.R.</span>
+							<span class="text-[9px] font-medium text-slate-500 mt-1 uppercase tracking-wider">Powered by
+								Revive Health</span>
+						</div>
 					</div>
 				</div>
 
 				<div class="hidden lg:flex items-center space-x-8">
 					<span
 						onclick="<?php echo is_front_page() ? "navigateTo('home')" : "window.location.href='" . home_url('/') . "'"; ?>"
-						id="nav-home" class="nav-link active text-slate-600">The Vision</span>
+						id="nav-home" class="nav-link active">Experience</span>
 					<span
-						onclick="<?php echo is_front_page() ? "navigateTo('method')" : "window.location.href='" . home_url('/') . "#method'"; ?>"
-						id="nav-method" class="nav-link text-slate-600">The Chassis</span>
+						onclick="<?php echo is_front_page() ? "navigateTo('method')" : "window.location.href='" . home_url('/#method') . "'"; ?>"
+						id="nav-method" class="nav-link">The Chassis</span>
 					<span
-						onclick="<?php echo is_front_page() ? "navigateTo('iul')" : "window.location.href='" . home_url('/') . "#iul'"; ?>"
-						id="nav-iul" class="nav-link text-slate-600">Wealth Strategy</span>
+						onclick="<?php echo is_front_page() ? "navigateTo('iul')" : "window.location.href='" . home_url('/#iul') . "'"; ?>"
+						id="nav-iul" class="nav-link">Wealth Strategy</span>
 					<span
-						onclick="<?php echo is_front_page() ? "navigateTo('timeline')" : "window.location.href='" . home_url('/') . "#timeline'"; ?>"
-						id="nav-timeline" class="nav-link text-slate-600">The Execution</span>
+						onclick="<?php echo is_front_page() ? "navigateTo('timeline')" : "window.location.href='" . home_url('/#timeline') . "'"; ?>"
+						id="nav-timeline" class="nav-link text-center leading-tight">Timeline<br>& Success</span>
 					<span
-						onclick="<?php echo is_front_page() ? "navigateTo('blog')" : "window.location.href='" . home_url('/') . "#blog'"; ?>"
-						id="nav-blog" class="nav-link text-slate-600 text-center leading-tight">Insights<br>&
-						Blog</span>
+						onclick="<?php echo is_front_page() ? "navigateTo('blog')" : "window.location.href='" . home_url('/#blog') . "'"; ?>"
+						id="nav-blog" class="nav-link text-center leading-tight">Insights<br>& Blog</span>
 					<button
-						onclick="<?php echo is_front_page() ? "navigateTo('contact')" : "window.location.href='" . home_url('/') . "#contact'"; ?>"
-						class="bg-navy text-white px-6 py-3 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-gold hover:text-navy transition duration-300 shadow-lg">
-						Verify Eligibility
+						onclick="<?php echo is_front_page() ? "navigateTo('contact')" : "window.location.href='" . home_url('/#contact') . "'"; ?>"
+						class="bg-navy text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-accent transition duration-300 shadow-md">
+						Get Started
 					</button>
 				</div>
 
-				<!-- Mobile Menu Button -->
 				<div class="lg:hidden flex items-center">
 					<button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
 						class="text-slate-600 focus:outline-none">
@@ -289,22 +233,22 @@
 			<div class="flex flex-col p-4 space-y-4">
 				<span
 					onclick="<?php echo is_front_page() ? "navigateTo('home')" : "window.location.href='" . home_url('/') . "'"; ?>"
-					class="nav-link text-slate-600">The Vision</span>
+					class="nav-link text-slate-600">Experience</span>
 				<span
-					onclick="<?php echo is_front_page() ? "navigateTo('method')" : "window.location.href='" . home_url('/') . "#method'"; ?>"
+					onclick="<?php echo is_front_page() ? "navigateTo('method')" : "window.location.href='" . home_url('/#method') . "'"; ?>"
 					class="nav-link text-slate-600">The Chassis</span>
 				<span
-					onclick="<?php echo is_front_page() ? "navigateTo('iul')" : "window.location.href='" . home_url('/') . "#iul'"; ?>"
+					onclick="<?php echo is_front_page() ? "navigateTo('iul')" : "window.location.href='" . home_url('/#iul') . "'"; ?>"
 					class="nav-link text-slate-600">Wealth Strategy</span>
 				<span
-					onclick="<?php echo is_front_page() ? "navigateTo('timeline')" : "window.location.href='" . home_url('/') . "#timeline'"; ?>"
-					class="nav-link text-slate-600">The Execution</span>
+					onclick="<?php echo is_front_page() ? "navigateTo('timeline')" : "window.location.href='" . home_url('/#timeline') . "'"; ?>"
+					class="nav-link text-slate-600">Timeline</span>
 				<span
-					onclick="<?php echo is_front_page() ? "navigateTo('blog')" : "window.location.href='" . home_url('/') . "#blog'"; ?>"
-					class="nav-link text-slate-600">Insights/Blog</span>
+					onclick="<?php echo is_front_page() ? "navigateTo('blog')" : "window.location.href='" . home_url('/#blog') . "'"; ?>"
+					class="nav-link text-slate-600">Insights</span>
 				<span
-					onclick="<?php echo is_front_page() ? "navigateTo('contact')" : "window.location.href='" . home_url('/') . "#contact'"; ?>"
-					class="nav-link text-blue-600 font-bold">Audit Eligibility</span>
+					onclick="<?php echo is_front_page() ? "navigateTo('contact')" : "window.location.href='" . home_url('/#contact') . "'"; ?>"
+					class="nav-link text-blue-600 font-bold">Get Started</span>
 			</div>
 		</div>
 	</nav>
