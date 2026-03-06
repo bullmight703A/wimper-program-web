@@ -34,6 +34,7 @@ require_once WIMPER_THEME_DIR . '/inc/setup.php';
 require_once WIMPER_THEME_DIR . '/inc/enqueue.php';
 require_once WIMPER_THEME_DIR . '/inc/nav-menus.php';
 require_once WIMPER_THEME_DIR . '/inc/template-tags.php';
+require_once WIMPER_THEME_DIR . '/inc/fix-alt-text.php';
 
 /**
  * Remove Gutenberg Block Library CSS on Frontend

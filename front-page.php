@@ -32,11 +32,11 @@ get_header();
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <button onclick="navigateTo('contact')"
-                            class="bg-navy text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-accent transition shadow-xl hover:-translate-y-1">
+                            class="bg-navy text-white px-8 md:px-10 py-4 rounded-xl font-bold text-lg hover:bg-accent transition shadow-xl hover:-translate-y-1 whitespace-nowrap shrink-0">
                             Launch Your Audit
                         </button>
                         <a href="#"
-                            class="inline-flex items-center justify-center px-10 py-4 text-slate-700 font-bold text-lg hover:text-accent transition">
+                            class="inline-flex items-center justify-center px-4 md:px-8 py-4 text-slate-700 font-bold text-lg hover:text-accent transition whitespace-nowrap shrink-0">
                             <i class="fas fa-calendar-alt mr-3"></i> Join Weekly Briefing
                         </a>
                     </div>
@@ -108,7 +108,8 @@ get_header();
                                 <div class="flex items-center space-x-4">
                                     <div
                                         class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold">
-                                        <i class="fas fa-check"></i></div>
+                                        <i class="fas fa-check"></i>
+                                    </div>
                                     <div class="flex-grow">
                                         <h4 class="text-sm font-bold text-slate-900">Corporate FICA Recapture</h4>
                                         <p class="text-xs text-slate-500">Savings flow back to the business. Net-zero
@@ -243,19 +244,22 @@ get_header();
                     <li class="flex items-center space-x-4">
                         <div
                             class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-accent">
-                            <i class="fas fa-video"></i></div>
+                            <i class="fas fa-video"></i>
+                        </div>
                         <span class="font-semibold text-slate-700">24/7 Virtual Urgent Care</span>
                     </li>
                     <li class="flex items-center space-x-4">
                         <div
                             class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-accent">
-                            <i class="fas fa-user-md"></i></div>
+                            <i class="fas fa-user-md"></i>
+                        </div>
                         <span class="font-semibold text-slate-700">Virtual Primary Care</span>
                     </li>
                     <li class="flex items-center space-x-4">
                         <div
                             class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-accent">
-                            <i class="fas fa-pills"></i></div>
+                            <i class="fas fa-pills"></i>
+                        </div>
                         <span class="font-semibold text-slate-700">Pharmacy Savings Benefit</span>
                     </li>
                 </ul>
@@ -370,7 +374,8 @@ get_header();
         <div class="flex items-start relative">
             <div
                 class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center font-bold z-10 shrink-0">
-                <i class="fas fa-check"></i></div>
+                <i class="fas fa-check"></i>
+            </div>
             <div class="ml-8">
                 <h3 class="text-2xl font-bold text-slate-900 mb-2">Activation & Recapture</h3>
                 <p class="text-slate-600">Go live. Employees access virtual care instantly. The business receives FICA
