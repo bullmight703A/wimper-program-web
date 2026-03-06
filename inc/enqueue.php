@@ -196,7 +196,7 @@ function wimper_enqueue_assets()
                 wp_enqueue_script(
                         'wimper-map-facade',
                         wimper_THEME_URI . '/assets/js/map-facade.js',
-                        array('wimper-main-js'), // Depend on main to ensure kidazzleData is available
+                        array('wimper-main-js'), // Depend on main to ensure wimperData is available
                         $js_version,
                         true
                 );
@@ -206,7 +206,7 @@ function wimper_enqueue_assets()
         // Localize script for AJAX and dynamic data.
         wp_localize_script(
                 'wimper-main-js',
-                'kidazzleData',
+                'wimperData',
                 array(
                         'ajaxUrl' => admin_url('admin-ajax.php'),
                         'nonce' => wp_create_nonce('wimper_nonce'),
