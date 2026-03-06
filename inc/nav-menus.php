@@ -81,7 +81,6 @@ function wimper_footer_nav_fallback()
 {
 	$pages = array(
 		'home' => 'Home',
-		'KIDazzle Creative Curriculum' => 'KIDazzle Creative Curriculum',
 		'programs' => 'All Programs',
 		'parents' => 'Parents'
 	);
@@ -222,8 +221,7 @@ function wimper_mobile_nav()
  */
 function wimper_mobile_nav_fallback()
 {
-	$program_slug = wimper_get_program_base_slug();
-	$pages = array($program_slug, "KIDazzle Creative Curriculum", "curriculum", "schedule", "locations", "faq");
+	$pages = array($program_slug, "curriculum", "schedule", "locations", "faq");
 	foreach ($pages as $slug) {
 		echo '<a href="#' . esc_attr($slug) . '" class="block py-3 border-b border-brand-ink/5 text-lg font-semibold text-brand-ink hover:text-wimper-blue transition">' . esc_html(ucwords(str_replace('-', ' ', $slug))) . '</a>';
 	}
