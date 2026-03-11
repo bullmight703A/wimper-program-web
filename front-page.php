@@ -249,13 +249,11 @@ get_header();
                     Unlike traditional supplemental plans, W.I.M.P.E.R. is a guaranteed issue protocol. Your entire
                     workforce can join without medical exams or history checks.
                 </p>
-                <div class="bg-slate-50 border-l-4 border-accent p-8 rounded-r-xl mb-8">
+                <div class="bg-slate-50 border-l-4 border-accent p-8 rounded-r-xl">
                     <h4 class="font-bold text-slate-900 mb-2">Institutional Compliance</h4>
                     <p class="text-sm text-slate-500">Our plan documents and PHP triggers have been audited for over 20
                         years without a single adverse finding.</p>
                 </div>
-                <button onclick="navigateTo('contact')"
-                    class="text-accent font-bold text-lg hover:text-navy transition inline-flex items-center">Get an Audit <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i></button>
             </div>
         </div>
     </section>
@@ -302,13 +300,10 @@ get_header();
                 <div class="bg-navy p-12 rounded-3xl text-white shadow-2xl relative overflow-hidden">
                     <div class="absolute -top-10 -right-10 w-40 h-40 bg-accent rounded-full blur-3xl opacity-20"></div>
                     <h3 class="text-3xl font-black mb-6">Private Client Access</h3>
-                    <p class="text-blue-100 mb-8 leading-relaxed text-sm">
+                    <p class="text-blue-100 leading-relaxed text-sm">
                         Not in a corporate W.I.M.P.E.R. program? You can still structure an individual IUL policy
                         directly. We offer **Private Client** access to the same high-performance vehicles.
                     </p>
-                    <a href="tel:5551234567"
-                        class="block w-full bg-accent text-white text-center py-4 rounded-xl font-bold hover:bg-white hover:text-navy transition shadow-lg">Schedule
-                        Private Quote</a>
                 </div>
             </div>
         </div>
@@ -351,7 +346,7 @@ get_header();
         <div class="flex items-start relative">
             <div
                 class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center font-bold z-10 shrink-0">
-                <i data-lucide="check" class="w-6 h-6"></i>
+                3
             </div>
             <div class="ml-8">
                 <h3 class="text-2xl font-bold text-slate-900 mb-2">Activation & Recapture</h3>
@@ -404,6 +399,71 @@ get_header();
                 title="Calendar Form">
             </iframe>
             <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+        </div>
+    </div>
+</div>
+
+<!-- ================================================================================= -->
+<!-- VIEW 7: POST-BOOKING (NEXT STEPS)                                                 -->
+<!-- ================================================================================= -->
+<div id="next-steps" class="page-view flex-grow bg-slate-50">
+    <header class="pt-28 md:pt-40 pb-12 md:pb-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-4 text-red-600">Your Consultation is NOT Confirmed.</h1>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto px-4 mt-6 font-bold">Please complete the steps below to confirm your audit.</p>
+    </header>
+
+    <div class="max-w-4xl mx-auto px-4 pb-20 space-y-12">
+        <!-- Step 1: Video Placeholder -->
+        <div class="bg-white p-8 rounded-3xl shadow-md border border-slate-100">
+            <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center"><span class="w-8 h-8 rounded-full bg-navy text-white text-sm flex items-center justify-center mr-3 shrink-0">1</span> Watch This Urgent Briefing</h3>
+            <div class="aspect-video bg-slate-200 rounded-xl flex items-center justify-center text-slate-500 border-2 border-dashed border-slate-300">
+                <span>[Video Placeholder: Re-anchoring pain & strategy]</span>
+            </div>
+        </div>
+
+        <!-- Step 2 & 3: Logistics -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-md border border-slate-100 text-center">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center justify-center"><span class="w-8 h-8 rounded-full bg-navy text-white text-sm flex items-center justify-center mr-3 shrink-0">2</span> Check Your Email</h3>
+                <p class="text-slate-600 mb-6">You will receive a calendar invitation shortly. <strong>Add this to your calendar</strong> so you do not miss your scheduled time.</p>
+                <i data-lucide="calendar-check" class="w-12 h-12 text-accent mx-auto"></i>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-md border border-slate-100 text-center">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center justify-center"><span class="w-8 h-8 rounded-full bg-navy text-white text-sm flex items-center justify-center mr-3 shrink-0">3</span> Advisor Outreach</h3>
+                <p class="text-slate-600 mb-6">An advisor from our team will proactively reach out to you via SMS/Phone to confirm the logistical details of your call.</p>
+                <i data-lucide="phone-call" class="w-12 h-12 text-accent mx-auto"></i>
+            </div>
+        </div>
+
+        <!-- Step 4: Identity / Action -->
+        <div class="bg-white p-8 rounded-3xl shadow-md border border-slate-100">
+            <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center"><span class="w-8 h-8 rounded-full bg-navy text-white text-sm flex items-center justify-center mr-3 shrink-0">4</span> What Happens Next</h3>
+            <p class="text-slate-600 mb-2">Between now and our call, you will receive our Executive Strategy Email Sequence. Please read these briefings carefully. They contain massive case studies, belief-breaking insights, and compliance frameworks that standard CPAs miss.</p>
+        </div>
+
+        <!-- Step 5: FAQ / Objections -->
+        <div class="bg-navy text-white p-8 md:p-12 rounded-3xl shadow-xl">
+            <h3 class="text-2xl font-bold mb-8 flex items-center"><span class="w-8 h-8 rounded-full bg-accent text-white text-sm flex items-center justify-center mr-4 shrink-0">5</span> Frequently Asked Questions</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white/10 p-6 rounded-xl border border-white/20">
+                    <h4 class="font-bold mb-2">Is this legal and compliant?</h4>
+                    <p class="text-sm text-blue-100">Yes. The chassis operates under standard Section 125 guidelines integrated with HIPAA-compliant telemedicine delivery.</p>
+                </div>
+                <div class="bg-white/10 p-6 rounded-xl border border-white/20">
+                    <h4 class="font-bold mb-2">Does it cost the employees?</h4>
+                    <p class="text-sm text-blue-100">No. Execution guarantees zero net reduction to employee take-home pay while delivering 24/7 care.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="text-center pt-10">
+            <h3 class="text-3xl font-black text-slate-900 mb-8">Trusted by Industry Leaders</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 italic text-slate-700">"The simplest $120k we ever added to our EBITDA." <br><span class="font-bold mt-4 block text-sm not-italic text-slate-900">- CFO, Mfg Inc</span></div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 italic text-slate-700">"Our employees love Revive Health. We love the FICA recapture." <br><span class="font-bold mt-4 block text-sm not-italic text-slate-900">- CEO, TechFlow</span></div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 italic text-slate-700">"Implementation was seamless. The audits were perfect." <br><span class="font-bold mt-4 block text-sm not-italic text-slate-900">- VP HR, Logistics</span></div>
+            </div>
         </div>
     </div>
 </div>

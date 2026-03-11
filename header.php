@@ -25,6 +25,9 @@
 	<meta name="twitter:description"
 		content="Self-funded EBITDA recapture engineered through a compliant Section 125 chassis. Reduce your taxable surface area today.">
 
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/images/wimper-logo.png">
+
 	<?php wp_head(); ?>
 
 	<!-- Tailwind CSS CDN (Keep Below wp_head to allow enqueue overrides if needed) -->
@@ -185,8 +188,8 @@
 					onclick="<?php echo is_front_page() ? "navigateTo('home')" : "window.location.href='" . home_url('/') . "'"; ?>">
 					<div class="flex items-center space-x-3">
 						<div
-							class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center text-white shadow-lg shadow-blue-200">
-							<i data-lucide="shield" class="w-6 h-6"></i>
+							class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center text-white shadow-lg shadow-blue-200 p-1 overflow-hidden">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/wimper-logo.png" alt="WIMPER Logo" class="w-full h-full object-contain">
 						</div>
 						<div class="flex flex-col">
 							<span
