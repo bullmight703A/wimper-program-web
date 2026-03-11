@@ -23,21 +23,6 @@
 
 <!-- LOGIC -->
 <script>
-	function navigateTo(pageId) {
-		document.querySelectorAll('.page-view').forEach(el => el.classList.remove('active'));
-		document.getElementById(pageId).classList.add('active');
-		document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
-		const activeLink = document.getElementById('nav-' + pageId);
-		if (activeLink) activeLink.classList.add('active');
-		window.scrollTo(0, 0);
-		document.getElementById('mobile-menu').classList.add('hidden');
-	}
-
-	function scrollToId(elementId) {
-		const element = document.getElementById(elementId);
-		if (element) element.scrollIntoView({ behavior: 'smooth' });
-	}
-
 	function updateHeroCalc() {
 		const calcRange = document.getElementById('calcRange');
 		if (calcRange) {
