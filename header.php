@@ -49,8 +49,9 @@
 	<!-- Chart.js -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 
-	<!-- FontAwesome -->
+	<!-- FontAwesome & Lucide -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+	<script src="https://unpkg.com/lucide@latest"></script>
 
 	<!-- Custom Styles from User HTML -->
 	<style>
@@ -185,7 +186,7 @@
 					<div class="flex items-center space-x-3">
 						<div
 							class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center text-white shadow-lg shadow-blue-200">
-							<i class="fas fa-shield-heart text-xl"></i>
+							<i data-lucide="shield" class="w-6 h-6"></i>
 						</div>
 						<div class="flex flex-col">
 							<span
@@ -220,38 +221,34 @@
 				</div>
 
 				<div class="lg:hidden flex items-center">
-					<button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
-						class="text-slate-600 focus:outline-none">
-						<i class="fas fa-bars text-2xl"></i>
+					<button onclick="document.getElementById('mobile-menu').classList.remove('hidden')"
+						class="text-slate-600 focus:outline-none hover:text-accent transition-colors">
+						<i data-lucide="menu" class="w-8 h-8"></i>
 					</button>
 				</div>
 			</div>
 		</div>
 
 		<!-- Mobile Menu -->
-		<div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100">
-			<div class="flex flex-col p-4 space-y-4">
-				<span
-					onclick="<?php echo is_front_page() ? "navigateTo('home')" : "window.location.href='" . home_url('/') . "'"; ?>"
-					class="nav-link text-slate-600">Experience</span>
-				<span
-					onclick="<?php echo is_front_page() ? "navigateTo('method')" : "window.location.href='" . home_url('/#method') . "'"; ?>"
-					class="nav-link text-slate-600">The Chassis</span>
-				<span
-					onclick="<?php echo is_front_page() ? "navigateTo('iul')" : "window.location.href='" . home_url('/#iul') . "'"; ?>"
-					class="nav-link text-slate-600">Wealth Strategy</span>
-				<span
-					onclick="<?php echo is_front_page() ? "navigateTo('timeline')" : "window.location.href='" . home_url('/#timeline') . "'"; ?>"
-					class="nav-link text-slate-600">Timeline</span>
-				<span
-					onclick="<?php echo is_front_page() ? "navigateTo('blog')" : "window.location.href='" . home_url('/#blog') . "'"; ?>"
-					class="nav-link text-slate-600">Insights</span>
-				<span
-					onclick="<?php echo is_front_page() ? "navigateTo('contact')" : "window.location.href='" . home_url('/#contact') . "'"; ?>"
-					class="nav-link text-blue-600 font-bold">Get Started</span>
-			</div>
+		<div id="mobile-menu" class="hidden fixed inset-0 z-[100] bg-white/95 backdrop-blur-md flex flex-col items-center justify-center space-y-8 font-extrabold text-2xl text-slate-800 transition-all">
+			<button onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="absolute top-6 right-6 text-slate-900 border-2 border-slate-200 rounded-full p-2 hover:bg-slate-100">
+				<i data-lucide="x" class="w-8 h-8"></i>
+			</button>
+			<span onclick="<?php echo is_front_page() ? "navigateTo('home')" : "window.location.href='" . home_url('/') . "'"; ?>; document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link !text-2xl hover:text-accent">Experience</span>
+			<span onclick="<?php echo is_front_page() ? "navigateTo('method')" : "window.location.href='" . home_url('/#method') . "'"; ?>; document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link !text-2xl hover:text-accent">The Chassis</span>
+			<span onclick="<?php echo is_front_page() ? "navigateTo('iul')" : "window.location.href='" . home_url('/#iul') . "'"; ?>; document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link !text-2xl hover:text-accent">Wealth Strategy</span>
+			<span onclick="<?php echo is_front_page() ? "navigateTo('timeline')" : "window.location.href='" . home_url('/#timeline') . "'"; ?>; document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link !text-2xl hover:text-accent">Timeline</span>
+			<span onclick="<?php echo is_front_page() ? "navigateTo('blog')" : "window.location.href='" . home_url('/#blog') . "'"; ?>; document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link !text-2xl hover:text-accent">Insights</span>
+			<span onclick="<?php echo is_front_page() ? "navigateTo('contact')" : "window.location.href='" . home_url('/#contact') . "'"; ?>; document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link !text-2xl text-accent font-black">Get Started</span>
 		</div>
 	</nav>
+
+	<script>
+		// Initialize Lucide Icons
+		if (typeof lucide !== 'undefined') {
+			lucide.createIcons();
+		}
+	</script>
 
 	<!-- MAIN CONTENT WRAPPER -->
 	<main class="min-h-screen">

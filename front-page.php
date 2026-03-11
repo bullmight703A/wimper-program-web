@@ -13,7 +13,7 @@ get_header();
 <!-- ================================================================================= -->
 <div id="home" class="page-view active flex-grow">
     <!-- Hero Section -->
-    <section class="hero-gradient pt-40 pb-32">
+    <section class="hero-gradient pt-28 md:pt-40 pb-16 md:pb-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 
@@ -37,7 +37,7 @@ get_header();
                         </button>
                         <a href="#"
                             class="inline-flex items-center justify-center px-4 md:px-8 py-4 text-slate-700 font-bold text-lg hover:text-accent transition whitespace-nowrap shrink-0">
-                            <i class="fas fa-calendar-alt mr-3"></i> Join Weekly Briefing
+                            <i data-lucide="calendar" class="w-5 h-5 mr-3"></i> Join Weekly Briefing
                         </a>
                     </div>
                 </div>
@@ -57,66 +57,47 @@ get_header();
                         </div>
 
                         <!-- Dash Content -->
-                        <div class="p-8 space-y-4">
+                        <div class="p-4 md:p-8 space-y-4">
                             <!-- Step 1 -->
-                            <div class="dash-step active p-6 rounded-xl border border-blue-100">
+                            <div class="dash-step active p-5 md:p-6 rounded-xl border border-blue-200 bg-blue-50/50">
                                 <div class="flex items-center space-x-4">
-                                    <div
-                                        class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white font-bold">
-                                        1</div>
+                                    <div class="w-10 h-10 bg-navy rounded-full flex items-center justify-center text-white font-bold shrink-0 shadow-md">1</div>
                                     <div class="flex-grow">
                                         <h4 class="text-sm font-bold text-slate-900">Weekly Strategy Briefing</h4>
-                                        <p class="text-xs text-slate-500">Join our session to verify corporate fit and
-                                            recapture feasibility.</p>
+                                        <p class="text-xs text-slate-600 mt-1">Verify corporate fit and recapture feasibility.</p>
                                     </div>
-                                    <span
-                                        class="text-[10px] bg-blue-100 text-blue-700 px-2 py-1 rounded font-bold uppercase">Discover</span>
                                 </div>
                             </div>
                             <!-- Step 2 -->
-                            <div class="dash-step p-6 rounded-xl border border-transparent">
+                            <div class="dash-step active p-5 md:p-6 rounded-xl border border-blue-200 bg-blue-50/50">
                                 <div class="flex items-center space-x-4">
-                                    <div
-                                        class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-400 font-bold">
-                                        2</div>
+                                    <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white font-bold shrink-0 shadow-md">2</div>
                                     <div class="flex-grow">
                                         <h4 class="text-sm font-bold text-slate-900">Guaranteed Issue Enrollment</h4>
-                                        <p class="text-xs text-slate-500">No medical underwriting. All employees
-                                            enrolled via Revive Health portal.</p>
+                                        <p class="text-xs text-slate-600 mt-1">No underwriting. Seamless portal enrollment.</p>
                                     </div>
-                                    <span
-                                        class="text-[10px] bg-slate-100 text-slate-500 px-2 py-1 rounded font-bold uppercase">Enroll</span>
                                 </div>
                             </div>
                             <!-- Step 3 -->
-                            <div class="dash-step p-6 rounded-xl border border-transparent">
+                            <div class="dash-step active p-5 md:p-6 rounded-xl border border-blue-200 bg-blue-50/50">
                                 <div class="flex items-center space-x-4">
-                                    <div
-                                        class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-400 font-bold">
-                                        3</div>
+                                    <div class="w-10 h-10 bg-[#0ea5e9] rounded-full flex items-center justify-center text-white font-bold shrink-0 shadow-md">3</div>
                                     <div class="flex-grow">
                                         <h4 class="text-sm font-bold text-slate-900">Employee Benefit Access</h4>
-                                        <p class="text-xs text-slate-500">Employees download the Revive App for 24/7
-                                            Virtual Primary Care.</p>
+                                        <p class="text-xs text-slate-600 mt-1">24/7 Virtual Primary Care via Revive App.</p>
                                     </div>
-                                    <span
-                                        class="text-[10px] bg-slate-100 text-slate-500 px-2 py-1 rounded font-bold uppercase">Benefit</span>
                                 </div>
                             </div>
                             <!-- Step 4 -->
-                            <div class="dash-step p-6 rounded-xl border border-transparent">
+                            <div class="dash-step active p-5 md:p-6 rounded-xl border border-green-200 bg-green-50">
                                 <div class="flex items-center space-x-4">
-                                    <div
-                                        class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold">
-                                        <i class="fas fa-check"></i>
+                                    <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold shrink-0 shadow-md">
+                                        <i data-lucide="check" class="w-6 h-6"></i>
                                     </div>
                                     <div class="flex-grow">
                                         <h4 class="text-sm font-bold text-slate-900">Corporate FICA Recapture</h4>
-                                        <p class="text-xs text-slate-500">Savings flow back to the business. Net-zero
-                                            employee payroll impact.</p>
+                                        <p class="text-xs text-slate-600 mt-1">Net-zero employee payroll impact. Savings flow back.</p>
                                     </div>
-                                    <span
-                                        class="text-[10px] bg-green-50 text-green-700 px-2 py-1 rounded font-bold uppercase">Savings</span>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +113,7 @@ get_header();
     </section>
 
     <!-- Features Grid -->
-    <section id="features" class="py-24 bg-white">
+    <section id="features" class="py-16 md:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20">
                 <h2 class="text-4xl font-extrabold text-slate-900 mb-4">A Better Way to Administer Benefits</h2>
@@ -144,27 +125,24 @@ get_header();
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
                 <div class="p-8 group">
-                    <div
-                        class="w-20 h-20 bg-soft-blue rounded-3xl flex items-center justify-center text-accent mx-auto mb-8 transition group-hover:scale-110">
-                        <i class="fas fa-mobile-button text-3xl"></i>
+                    <div class="w-20 h-20 bg-blue-50 border border-blue-100 rounded-[2rem] flex items-center justify-center text-accent mx-auto mb-8 transition-transform group-hover:scale-110 shadow-sm group-hover:shadow-md">
+                        <i data-lucide="smartphone" class="w-8 h-8"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Mobile Experience</h3>
                     <p class="text-slate-500 text-sm">Powered by <strong>Revive Health</strong>, providing employees
                         with instant access to care and plan documents.</p>
                 </div>
                 <div class="p-8 group">
-                    <div
-                        class="w-20 h-20 bg-soft-blue rounded-3xl flex items-center justify-center text-accent mx-auto mb-8 transition group-hover:scale-110">
-                        <i class="fas fa-hand-holding-dollar text-3xl"></i>
+                    <div class="w-20 h-20 bg-blue-50 border border-blue-100 rounded-[2rem] flex items-center justify-center text-accent mx-auto mb-8 transition-transform group-hover:scale-110 shadow-sm group-hover:shadow-md">
+                        <i data-lucide="trending-up" class="w-8 h-8"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Corporate Savings</h3>
                     <p class="text-slate-500 text-sm">Average annual FICA recapture of $1,100 per employee, returned
                         directly to the business bottom line.</p>
                 </div>
                 <div class="p-8 group">
-                    <div
-                        class="w-20 h-20 bg-soft-blue rounded-3xl flex items-center justify-center text-accent mx-auto mb-8 transition group-hover:scale-110">
-                        <i class="fas fa-clipboard-check text-3xl"></i>
+                    <div class="w-20 h-20 bg-blue-50 border border-blue-100 rounded-[2rem] flex items-center justify-center text-accent mx-auto mb-8 transition-transform group-hover:scale-110 shadow-sm group-hover:shadow-md">
+                        <i data-lucide="shield-check" class="w-8 h-8"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Guaranteed Issue</h3>
                     <p class="text-slate-500 text-sm">No medical underwriting. No one is turned away. Seamless
@@ -175,7 +153,7 @@ get_header();
     </section>
 
     <!-- Calculator Section -->
-    <section class="py-24 bg-slate-900 text-white overflow-hidden relative">
+    <section class="py-16 md:py-24 bg-slate-900 text-white overflow-hidden relative">
         <div
             class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
         </div>
@@ -224,7 +202,7 @@ get_header();
 <!-- VIEW 2: METHOD (THE CHASSIS)                                                      -->
 <!-- ================================================================================= -->
 <div id="method" class="page-view flex-grow bg-white">
-    <section class="pt-40 pb-24">
+    <section class="pt-28 md:pt-40 pb-16 md:pb-24">
         <div class="max-w-5xl mx-auto px-4 text-center">
             <h1 class="text-5xl font-black text-slate-900 mb-6">The W.I.M.P.E.R. Chassis</h1>
             <p class="text-xl text-slate-500 font-medium max-w-2xl mx-auto">
@@ -234,7 +212,7 @@ get_header();
         </div>
     </section>
 
-    <section class="pb-24">
+    <section class="pb-16 md:pb-24">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div class="bg-soft-blue p-12 rounded-3xl border border-blue-100 shadow-sm">
                 <h3 class="text-3xl font-black text-navy mb-8">Integrated Medical Access</h3>
@@ -244,21 +222,21 @@ get_header();
                     <li class="flex items-center space-x-4">
                         <div
                             class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-accent">
-                            <i class="fas fa-video"></i>
+                            <i data-lucide="video" class="w-5 h-5"></i>
                         </div>
                         <span class="font-semibold text-slate-700">24/7 Virtual Urgent Care</span>
                     </li>
                     <li class="flex items-center space-x-4">
                         <div
                             class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-accent">
-                            <i class="fas fa-user-md"></i>
+                            <i data-lucide="stethoscope" class="w-5 h-5"></i>
                         </div>
                         <span class="font-semibold text-slate-700">Virtual Primary Care</span>
                     </li>
                     <li class="flex items-center space-x-4">
                         <div
                             class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-accent">
-                            <i class="fas fa-pills"></i>
+                            <i data-lucide="pill" class="w-5 h-5"></i>
                         </div>
                         <span class="font-semibold text-slate-700">Pharmacy Savings Benefit</span>
                     </li>
@@ -277,8 +255,7 @@ get_header();
                         years without a single adverse finding.</p>
                 </div>
                 <button onclick="navigateTo('contact')"
-                    class="text-accent font-bold text-lg hover:text-navy transition">Get an Audit <i
-                        class="fas fa-arrow-right ml-2"></i></button>
+                    class="text-accent font-bold text-lg hover:text-navy transition inline-flex items-center">Get an Audit <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i></button>
             </div>
         </div>
     </section>
@@ -288,7 +265,7 @@ get_header();
 <!-- VIEW 3: WEALTH STRATEGY (IUL)                                                     -->
 <!-- ================================================================================= -->
 <div id="iul" class="page-view flex-grow bg-white">
-    <header class="pt-40 pb-20">
+    <header class="pt-28 md:pt-40 pb-12 md:pb-20">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <span class="text-accent text-xs font-bold uppercase tracking-widest mb-4 block">Phase 2: Wealth
                 Accumulation</span>
@@ -299,7 +276,7 @@ get_header();
         </div>
     </header>
 
-    <section class="py-24">
+    <section class="py-16 md:py-24">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div>
                 <h2 class="text-4xl font-black text-slate-900 mb-8">Recaptured Savings <br>Meet Market Growth</h2>
@@ -342,7 +319,7 @@ get_header();
 <!-- VIEW 4: TIMELINE (IMPLEMENTATION)                                                 -->
 <!-- ================================================================================= -->
 <div id="timeline" class="page-view flex-grow bg-slate-50">
-    <header class="pt-40 pb-20">
+    <header class="pt-28 md:pt-40 pb-12 md:pb-20">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h1 class="text-5xl font-black text-slate-900 mb-6">Execution Protocol</h1>
             <p class="text-xl text-slate-500 font-medium">Simple deployment. Zero disruption. Savings realized in 45
@@ -350,7 +327,7 @@ get_header();
         </div>
     </header>
 
-    <div class="max-w-3xl mx-auto px-4 py-20">
+    <div class="max-w-3xl mx-auto px-4 py-12 md:py-20">
         <div class="flex items-start mb-16 relative">
             <div
                 class="w-12 h-12 bg-navy text-white rounded-full flex items-center justify-center font-bold z-10 shrink-0">
@@ -374,7 +351,7 @@ get_header();
         <div class="flex items-start relative">
             <div
                 class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center font-bold z-10 shrink-0">
-                <i class="fas fa-check"></i>
+                <i data-lucide="check" class="w-6 h-6"></i>
             </div>
             <div class="ml-8">
                 <h3 class="text-2xl font-bold text-slate-900 mb-2">Activation & Recapture</h3>
@@ -394,11 +371,11 @@ get_header();
 
 <!-- VIEW 5: INSIGHTS & VIEW 6: CONTACT -->
 <div id="blog" class="page-view flex-grow bg-white">
-    <header class="pt-40 pb-20 bg-slate-900 text-white text-center">
+    <header class="pt-28 md:pt-40 pb-12 md:pb-20 bg-slate-900 text-white text-center">
         <h1 class="text-5xl font-black mb-6">The Executive Digest</h1>
         <p class="text-xl text-slate-400">Tax code updates and EBITDA strategy briefings.</p>
     </header>
-    <div class="max-w-5xl mx-auto px-4 py-24 space-y-12">
+    <div class="max-w-5xl mx-auto px-4 py-16 md:py-24 space-y-12">
         <article
             class="flex flex-col md:flex-row bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer">
             <div class="md:w-1/3 bg-slate-100 h-48 md:h-auto"></div>
@@ -407,20 +384,19 @@ get_header();
                 <h3 class="text-2xl font-black text-slate-900 mb-4">Why the CFO is the New Chief Wellness Officer</h3>
                 <p class="text-slate-500 mb-6">How Section 125 compliance is redefining boardroom priorities for EBITDA
                     growth in 2025.</p>
-                <button class="text-navy font-bold text-sm uppercase tracking-widest hover:text-accent">Read Briefing <i
-                        class="fas fa-arrow-right ml-2"></i></button>
+                <button class="text-navy font-bold text-sm uppercase tracking-widest hover:text-accent inline-flex items-center">Read Briefing <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></button>
             </div>
         </article>
     </div>
 </div>
 
 <div id="contact" class="page-view flex-grow bg-soft-blue">
-    <header class="pt-40 pb-20 text-center">
+    <header class="pt-28 md:pt-40 pb-12 md:pb-20 text-center">
         <h1 class="text-5xl font-black text-slate-900">Verify Eligibility.</h1>
         <p class="text-xl text-slate-500 mt-4 leading-relaxed">Submit your headcount for a preliminary FICA recapture
             audit.</p>
     </header>
-    <div class="max-w-4xl mx-auto px-4 pb-32">
+    <div class="max-w-4xl mx-auto px-4 pb-16 md:pb-32">
         <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-100">
             <iframe src="https://api.leadconnectorhq.com/widget/form/bnJjCYqGaVFUFp4v8wp6"
                 style="width:100%;height:100%;border:none;min-height: 600px;" id="inline-bnJjCYqGaVFUFp4v8wp6"
