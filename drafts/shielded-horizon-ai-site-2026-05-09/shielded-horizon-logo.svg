@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Shielded Horizon logo</title>
+  <desc id="desc">A shield containing a horizon line and rising sun, paired with the Shielded Horizon wordmark.</desc>
+  <defs>
+    <linearGradient id="shieldFill" x1="92" y1="42" x2="270" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#102A43"/>
+    </linearGradient>
+    <linearGradient id="skyFill" x1="109" y1="91" x2="255" y2="224" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E6F4F1"/>
+      <stop offset="1" stop-color="#D6A73A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="360" fill="#F8FAFC"/>
+  <g transform="translate(66 34)">
+    <path d="M145 6c39 25 82 37 129 40v101c0 78-49 127-129 156C65 274 16 225 16 147V46c47-3 90-15 129-40Z" fill="url(#shieldFill)"/>
+    <path d="M145 28c33 19 68 30 107 34v84c0 63-38 104-107 131C76 250 38 209 38 146V62c39-4 74-15 107-34Z" fill="#FFFFFF" opacity=".95"/>
+    <path d="M60 153c28-36 58-54 90-54 31 0 60 18 86 54H60Z" fill="url(#skyFill)"/>
+    <path d="M77 166h136" stroke="#102A43" stroke-width="10" stroke-linecap="round"/>
+    <path d="M94 190h102" stroke="#0F766E" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="151" cy="126" r="27" fill="#D6A73A"/>
+    <path d="M65 219c23 23 50 40 80 52 31-12 58-29 81-52" fill="none" stroke="#102A43" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(382 112)">
+    <text x="0" y="0" fill="#102A43" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="700" letter-spacing="0">Shielded Horizon</text>
+    <text x="2" y="58" fill="#334155" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="28" font-weight="500" letter-spacing="0">Clear Section 125 education for employers</text>
+    <rect x="4" y="90" width="126" height="8" rx="4" fill="#0F766E"/>
+    <rect x="144" y="90" width="72" height="8" rx="4" fill="#D6A73A"/>
+    <rect x="230" y="90" width="96" height="8" rx="4" fill="#102A43"/>
+  </g>
+</svg>

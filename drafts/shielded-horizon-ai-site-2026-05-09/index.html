@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shielded Horizon | AI-Assisted Section 125 Education</title>
+  <meta name="description" content="Shielded Horizon helps employers understand Section 125 opportunities through AI-assisted intake, education, review tracking, and compliance-aware operating support.">
+  <style>
+    :root {
+      --navy: #102A43;
+      --teal: #0F766E;
+      --gold: #D6A73A;
+      --sky: #E6F4F1;
+      --ink: #0F172A;
+      --slate: #334155;
+      --muted: #64748B;
+      --line: #CBD5E1;
+      --surface: #F8FAFC;
+      --white: #FFFFFF;
+      --green: #15803D;
+      --amber: #B45309;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--surface);
+      color: var(--ink);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    a { color: inherit; }
+
+    .site-shell {
+      min-height: 100vh;
+      background:
+        linear-gradient(180deg, rgba(230,244,241,.86), rgba(248,250,252,0) 360px),
+        var(--surface);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(248, 250, 252, .94);
+      border-bottom: 1px solid rgba(203, 213, 225, .9);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 220px;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 5px;
+    }
+
+    .brand-name {
+      display: grid;
+      gap: 1px;
+    }
+
+    .brand-name strong {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .brand-name span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      color: var(--slate);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    nav a {
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      background: var(--teal);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .button.secondary {
+      background: var(--white);
+      color: var(--navy);
+      border-color: var(--line);
+    }
+
+    .hero {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 650px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(360px, .78fr);
+      gap: 54px;
+      align-items: center;
+      padding: 72px 0 50px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(15, 118, 110, .26);
+      background: rgba(255, 255, 255, .76);
+      color: var(--teal);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--gold);
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: .98;
+      max-width: 820px;
+    }
+
+    .lead {
+      margin: 22px 0 0;
+      max-width: 720px;
+      color: var(--slate);
+      font-size: 20px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 38px;
+      max-width: 780px;
+    }
+
+    .trust-item {
+      background: rgba(255, 255, 255, .72);
+      border: 1px solid rgba(203, 213, 225, .9);
+      border-radius: 8px;
+      padding: 14px;
+      min-height: 118px;
+    }
+
+    .trust-item b {
+      display: block;
+      color: var(--navy);
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .trust-item span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .system-panel {
+      background: var(--white);
+      border: 1px solid rgba(203, 213, 225, .94);
+      border-radius: 8px;
+      box-shadow: 0 22px 70px rgba(15, 23, 42, .12);
+      overflow: hidden;
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--navy);
+      color: var(--white);
+      padding: 16px 18px;
+      font-weight: 800;
+    }
+
+    .panel-head span {
+      color: #BFE5DF;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .ai-flow {
+      padding: 20px;
+      display: grid;
+      gap: 13px;
+    }
+
+    .flow-step {
+      display: grid;
+      grid-template-columns: 34px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      background: #FBFDFF;
+    }
+
+    .step-num {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 7px;
+      background: var(--sky);
+      color: var(--teal);
+      font-weight: 900;
+    }
+
+    .flow-step b {
+      display: block;
+      color: var(--navy);
+      font-size: 14px;
+    }
+
+    .flow-step small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .status {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .status.review { color: var(--amber); }
+
+    section {
+      padding: 74px 0;
+    }
+
+    .band {
+      background: var(--white);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .inner {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+
+    .section-top h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.04;
+      max-width: 780px;
+    }
+
+    .section-top p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 430px;
+      font-size: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      min-height: 250px;
+    }
+
+    .band .card { background: #FBFDFF; }
+
+    .icon {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: var(--sky);
+      color: var(--teal);
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      font-size: 19px;
+      line-height: 1.18;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: .88fr 1.12fr;
+      gap: 46px;
+      align-items: start;
+    }
+
+    .plain-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .plain-list li {
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 12px;
+      color: var(--slate);
+      font-weight: 650;
+    }
+
+    .plain-list li::before {
+      content: "✓";
+      display: grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: var(--sky);
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .process {
+      display: grid;
+      gap: 14px;
+    }
+
+    .process-item {
+      display: grid;
+      grid-template-columns: 68px 1fr;
+      gap: 16px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+    }
+
+    .process-num {
+      color: var(--gold);
+      font-size: 28px;
+      font-weight: 900;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .process-item h3 {
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .process-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .ai-band {
+      background: var(--navy);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ai-band::after {
+      content: "";
+      position: absolute;
+      right: -130px;
+      top: -110px;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(214, 167, 58, .28);
+      border-radius: 999px;
+    }
+
+    .ai-band h2,
+    .ai-band h3 {
+      color: var(--white);
+    }
+
+    .ai-band p,
+    .ai-band .card p {
+      color: #C9D8E4;
+    }
+
+    .ai-band .card {
+      background: rgba(255, 255, 255, .06);
+      border-color: rgba(255, 255, 255, .16);
+    }
+
+    .ai-band .icon {
+      background: rgba(15, 118, 110, .32);
+      color: #BFE5DF;
+    }
+
+    .faq {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    details {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 17px 18px;
+    }
+
+    summary {
+      color: var(--navy);
+      font-weight: 850;
+      cursor: pointer;
+    }
+
+    details p {
+      color: var(--muted);
+      margin: 10px 0 0;
+    }
+
+    .cta {
+      background: var(--teal);
+      color: var(--white);
+      padding: 58px 0;
+    }
+
+    .cta .inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .cta h2 {
+      color: var(--white);
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.05;
+    }
+
+    .cta p {
+      margin: 12px 0 0;
+      color: #D9F3EF;
+      max-width: 680px;
+    }
+
+    .cta .button {
+      background: var(--white);
+      color: var(--teal);
+    }
+
+    footer {
+      background: #071726;
+      color: #D5E4EF;
+      padding: 34px 0;
+      font-size: 14px;
+    }
+
+    footer .inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    footer b { color: var(--white); }
+
+    .disclaimer {
+      max-width: 760px;
+      color: #9FB2C3;
+    }
+
+    @media (max-width: 900px) {
+      nav { display: none; }
+
+      .hero,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 42px;
+      }
+
+      .trust-row,
+      .grid-3,
+      .faq {
+        grid-template-columns: 1fr;
+      }
+
+      .section-top,
+      .cta .inner,
+      footer .inner {
+        display: grid;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .nav {
+        min-height: 68px;
+      }
+
+      .brand-name span {
+        display: none;
+      }
+
+      .nav .button {
+        min-height: 38px;
+        padding: 0 12px;
+      }
+
+      .flow-step {
+        grid-template-columns: 34px 1fr;
+      }
+
+      .status {
+        grid-column: 2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header>
+      <div class="nav">
+        <a class="brand" href="#">
+          <img class="brand-mark" src="shielded-horizon-mark.svg" alt="Shielded Horizon mark">
+          <span class="brand-name">
+            <strong>Shielded Horizon</strong>
+            <span>Employer education + AI support</span>
+          </span>
+        </a>
+        <nav aria-label="Primary">
+          <a href="#why">Why Review</a>
+          <a href="#system">AI System</a>
+          <a href="#process">Process</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a class="button" href="#review">Request Review</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">Section 125 education with AI-assisted operating support</span>
+          <h1>Employer benefit clarity before implementation.</h1>
+          <p class="lead">Shielded Horizon helps employers understand Section 125 opportunities, organize review materials, and move from education to next steps through an AI-supported, human-reviewed workflow.</p>
+          <div class="hero-actions">
+            <a class="button" href="#review">Request a Section 125 Review</a>
+            <a class="button secondary" href="#process">See the review path</a>
+          </div>
+          <div class="trust-row" aria-label="Key safeguards">
+            <div class="trust-item">
+              <b>Compliance-aware by design</b>
+              <span>Educational language, review gates, and source tracking before decisions are made.</span>
+            </div>
+            <div class="trust-item">
+              <b>Built for employer teams</b>
+              <span>Clear intake for ownership, HR, payroll, benefits, and finance stakeholders.</span>
+            </div>
+            <div class="trust-item">
+              <b>AI-assisted, not AI-final</b>
+              <span>Automation organizes the work. Human review controls claims and implementation.</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="system-panel" aria-label="AI workflow preview">
+          <div class="panel-head">
+            <div>Review Console</div>
+            <span>AI Assisted</span>
+          </div>
+          <div class="ai-flow">
+            <div class="flow-step">
+              <div class="step-num">1</div>
+              <div>
+                <b>Employer signal intake</b>
+                <small>Workforce size, payroll rhythm, benefits posture, and review goals.</small>
+              </div>
+              <div class="status">Ready</div>
+            </div>
+            <div class="flow-step">
+              <div class="step-num">2</div>
+              <div>
+                <b>AI-organized document map</b>
+                <small>AI Assisted review creates a missing-item list without storing sensitive files in the public report.</small>
+              </div>
+              <div class="status">Mapped</div>
+            </div>
+            <div class="flow-step">
+              <div class="step-num">3</div>
+              <div>
+                <b>Education brief</b>
+                <small>Plain-language explanation of possible Section 125 review areas.</small>
+              </div>
+              <div class="status">Draft</div>
+            </div>
+            <div class="flow-step">
+              <div class="step-num">4</div>
+              <div>
+                <b>Human approval gate</b>
+                <small>Claims, estimates, and recommendations are reviewed before use.</small>
+              </div>
+              <div class="status review">Review</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="why" class="band">
+        <div class="inner">
+          <div class="section-top">
+            <h2>Employers need more than a pitch. They need a controlled review path.</h2>
+            <p>Borrowing from the strongest benefits platforms, Shielded Horizon frames the work around clarity, care access, payroll coordination, and compliance documentation.</p>
+          </div>
+          <div class="grid-3">
+            <article class="card">
+              <div class="icon">01</div>
+              <h3>Payroll and benefit questions in one place</h3>
+              <p>Employers can organize the review around payroll cadence, current benefit structure, employee eligibility signals, and the questions leadership needs answered.</p>
+            </article>
+            <article class="card">
+              <div class="icon">02</div>
+              <h3>Education before action</h3>
+              <p>Shielded Horizon explains Section 125 concepts in plain language before any employer changes payroll, benefits, enrollment, or employee communication.</p>
+            </article>
+            <article class="card">
+              <div class="icon">03</div>
+              <h3>Support that can scale</h3>
+              <p>AI helps sort forms, track blockers, prepare briefs, and flag missing information so the human team can focus on review, decisions, and implementation readiness.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="system" class="ai-band">
+        <div class="inner">
+          <div class="section-top">
+            <h2>The AI layer is an operating system for the review, not a replacement for review.</h2>
+            <p>The AI Assisted layer keeps the process moving: intake, evidence, missing items, decision logs, approval packets, and next actions.</p>
+          </div>
+          <div class="grid-3">
+            <article class="card">
+              <div class="icon">AI</div>
+              <h3>Guided employer intake</h3>
+              <p>Structured questions help collect the right non-sensitive signals before the team requests payroll, census, or plan-related materials through approved channels.</p>
+            </article>
+            <article class="card">
+              <div class="icon">LOG</div>
+              <h3>Outcome memory</h3>
+              <p>The AI Assisted system records decisions, results, blockers, and next actions so every review has a durable trail instead of scattered notes and missed follow-up.</p>
+            </article>
+            <article class="card">
+              <div class="icon">CHK</div>
+              <h3>Approval packets</h3>
+              <p>Before claims, outreach, or site changes go live, the AI Assisted workflow prepares a packet that shows source context, risk notes, and the exact action being requested.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="inner">
+          <div class="section-top">
+            <h2>Built to coordinate with payroll after each run.</h2>
+            <p>Shielded Horizon is designed around read-only payroll visibility, clean review trails, and practical status-change support without creating extra work for the employer team.</p>
+          </div>
+          <div class="grid-3">
+            <article class="card">
+              <div class="icon">PAY</div>
+              <h3>Read-only payroll coordination</h3>
+              <p>After payroll information is provided through approved channels, the AI Assisted infrastructure helps organize review signals and keep the employer's payroll process moving without changing payroll records directly.</p>
+            </article>
+            <article class="card">
+              <div class="icon">EMP</div>
+              <h3>Status-change awareness</h3>
+              <p>When employee status changes are identified, the workflow can help route offboarding communication, benefits timing notes, and follow-up tasks so the right people receive clear next steps.</p>
+            </article>
+            <article class="card">
+              <div class="icon">INV</div>
+              <h3>Smoother invoicing support</h3>
+              <p>The AI Assisted layer keeps payroll-cycle evidence, employee status updates, and billing context organized so invoicing can be handled with fewer gaps and fewer repeated requests.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="inner split">
+          <div>
+            <span class="eyebrow">What Shielded Horizon does</span>
+            <h2 style="margin-top:18px;font-size:clamp(30px,4vw,46px);line-height:1.06;">A practical bridge between education, payroll review, and next steps.</h2>
+            <p class="lead" style="font-size:17px;">The site should make the employer feel that there is a real system behind the conversation: not just a form, not just a chatbot, and not a vague benefits promise.</p>
+          </div>
+          <ul class="plain-list">
+            <li>Explains Section 125 review concepts in employer-friendly language.</li>
+            <li>Organizes intake around HR, payroll, finance, and benefits stakeholders.</li>
+            <li>Tracks missing information, owner assignments, and review status.</li>
+            <li>Creates educational briefs and source-controlled claim notes.</li>
+            <li>Routes qualified employers toward a feasibility review or program discussion.</li>
+            <li>Maintains a clear boundary between education and final legal, tax, payroll, or plan-administration decisions.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="process" class="band">
+        <div class="inner split">
+          <div>
+            <span class="eyebrow">Review path</span>
+            <h2 style="margin-top:18px;font-size:clamp(30px,4vw,46px);line-height:1.06;">From first question to organized employer review.</h2>
+            <p class="lead" style="font-size:17px;">This page can send leads into the WIMPER backend while keeping Shielded Horizon as the public education and trust layer.</p>
+          </div>
+          <div class="process">
+            <article class="process-item">
+              <div class="process-num">01</div>
+              <div>
+                <h3>Discovery and eligibility signals</h3>
+                <p>Collect basic employer context, workforce signals, current benefit posture, and the questions the team wants answered.</p>
+              </div>
+            </article>
+            <article class="process-item">
+              <div class="process-num">02</div>
+              <div>
+                <h3>Document and data checklist</h3>
+                <p>The AI Assisted workflow prepares a missing-item map for payroll, census, benefits, and stakeholder review needs without exposing sensitive data in public reports.</p>
+              </div>
+            </article>
+            <article class="process-item">
+              <div class="process-num">03</div>
+              <div>
+                <h3>Education brief and review packet</h3>
+                <p>The employer receives plain-language context and a controlled path for next-step review, including what is known, unknown, and pending.</p>
+              </div>
+            </article>
+            <article class="process-item">
+              <div class="process-num">04</div>
+              <div>
+                <h3>Human-reviewed implementation path</h3>
+                <p>Any estimate, claim, recommendation, or implementation step is moved through human review before it becomes final.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="inner">
+          <div class="section-top">
+            <h2>Questions employers usually need answered first.</h2>
+            <p>The FAQ should keep a calm compliance posture and avoid promising specific savings before review.</p>
+          </div>
+          <div class="faq">
+            <details open>
+              <summary>Is this legal or tax advice?</summary>
+              <p>No. The site is educational. Employers should review their specific situation with qualified legal, tax, payroll, benefits, and plan-administration professionals.</p>
+            </details>
+            <details>
+              <summary>What does the AI actually do?</summary>
+              <p>AI helps organize intake, draft education materials, track missing items, prepare approval packets, and keep next actions visible. It does not make final compliance decisions.</p>
+            </details>
+            <details>
+              <summary>Does Shielded Horizon replace our health plan?</summary>
+              <p>The review is designed to understand how a Section 125-related path may fit with the employer's existing structure. Fit depends on the employer's facts and review results.</p>
+            </details>
+            <details>
+              <summary>What information is needed for a review?</summary>
+              <p>Basic workforce, payroll, benefits, and stakeholder context are needed first. Sensitive materials should only be provided through approved secure channels.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="review" class="cta">
+        <div class="inner">
+          <div>
+            <h2>Start with clarity. Move only when the review supports it.</h2>
+            <p>Request an employer review and receive an organized next-step path for Section 125 education, intake, and human-reviewed decision support.</p>
+          </div>
+          <a class="button" href="mailto:info@shieldedhorizons.com?subject=Shielded%20Horizon%20Review%20Request">Request Review</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="inner">
+        <div>
+          <b>Shielded Horizon</b><br>
+          Clear Section 125 education for employers.
+        </div>
+        <div class="disclaimer">Educational draft only. This material is not legal, tax, accounting, payroll, plan-administration, or benefits advice. Claims, estimates, and implementation language require human review before publishing.</div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
