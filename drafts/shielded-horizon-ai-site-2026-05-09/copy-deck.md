@@ -55,7 +55,7 @@ Automation organizes the work. Human review controls claims and implementation.
 
 The AI layer is an operating system for the review, not a replacement for review.
 
-IRO keeps the process moving: intake, evidence, missing items, decision logs, approval packets, and next actions.
+The AI Assisted layer keeps the process moving: intake, evidence, missing items, decision logs, approval packets, and next actions.
 
 Guided employer intake:
 
@@ -63,11 +63,11 @@ Structured questions help collect the right non-sensitive signals before the tea
 
 Outcome memory:
 
-IRO records decisions, results, blockers, and next actions so every review has a durable trail instead of scattered notes and missed follow-up.
+The AI Assisted system records decisions, results, blockers, and next actions so every review has a durable trail instead of scattered notes and missed follow-up.
 
 Approval packets:
 
-Before claims, outreach, or site changes go live, IRO prepares a packet that shows source context, risk notes, and the exact action being requested.
+Before claims, outreach, or site changes go live, the AI Assisted workflow prepares a packet that shows source context, risk notes, and the exact action being requested.
 
 ## Process
 
@@ -77,7 +77,7 @@ Collect basic employer context, workforce signals, current benefit posture, and 
 
 2. Document and data checklist
 
-IRO prepares a missing-item map for payroll, census, benefits, and stakeholder review needs without exposing sensitive data in public reports.
+The AI Assisted workflow prepares a missing-item map for payroll, census, benefits, and stakeholder review needs without exposing sensitive data in public reports.
 
 3. Education brief and review packet
 
