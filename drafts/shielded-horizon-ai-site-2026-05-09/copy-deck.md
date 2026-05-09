@@ -69,6 +69,28 @@ Approval packets:
 
 Before claims, outreach, or site changes go live, the AI Assisted workflow prepares a packet that shows source context, risk notes, and the exact action being requested.
 
+## Payroll Coordination Overview
+
+Headline:
+
+Built to coordinate with payroll after each run.
+
+Subhead:
+
+Shielded Horizon is designed around read-only payroll visibility, clean review trails, and practical status-change support without creating extra work for the employer team.
+
+Read-only payroll coordination:
+
+After payroll information is provided through approved channels, the AI Assisted infrastructure helps organize review signals and keep the employer's payroll process moving without changing payroll records directly.
+
+Status-change awareness:
+
+When employee status changes are identified, the workflow can help route offboarding communication, benefits timing notes, and follow-up tasks so the right people receive clear next steps.
+
+Smoother invoicing support:
+
+The AI Assisted layer keeps payroll-cycle evidence, employee status updates, and billing context organized so invoicing can be handled with fewer gaps and fewer repeated requests.
+
 ## Process
 
 1. Discovery and eligibility signals
